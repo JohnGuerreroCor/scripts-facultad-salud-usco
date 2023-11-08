@@ -304,6 +304,7 @@ CREATE TABLE dbo.persona (
     tae_codigo INT,
     per_familiar_direccion NVARCHAR(255),
     per_familiar_nombre NVARCHAR(60),
+    per_familiar_email varchar(100),
     per_familiar_telefono NVARCHAR(30),
     per_familiar_lugar_residencia CHAR(8),
     per_email NVARCHAR(100),

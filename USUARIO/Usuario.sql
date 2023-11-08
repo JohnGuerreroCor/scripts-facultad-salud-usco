@@ -67,7 +67,7 @@ VALUES(1, '1075303330', NULL, 1);
 
 INSERT INTO dbo.usuario
 (per_codigo, usu_nombre, uwd2, ust_codigo)
-VALUES(1, '1075303330', NULL, 1);
+VALUES(1, 'a1075303330', NULL, 1);
 
 -----------------------------------
 -------VISTA USUARIO GENERAL-------
@@ -120,7 +120,7 @@ select u.usu_codigo, u.per_codigo, u.usu_nombre, u.uwd2, u.ust_codigo, u.usu_est
 inner join persona p on u.per_codigo = p.per_codigo 
 inner join tipo_identificacion ti on p.tii_codigo = ti.tii_codigo 
 inner join estado_civil ec on p.esc_codigo = ec.esc_codigo 
-inner join genero g on p.gen_codigo = g.gen_codigo 
+inner join sexo_biologico sb on sb.seb_codigo = p.seb_codigo 
 
 CREATE VIEW vista_usuario_alterno AS
 select u.usu_codigo, u.per_codigo, u.usu_nombre, u.uwd2, u.ust_codigo, u.usu_estado, p.per_nombre, p.per_apellido, p.per_identificacion from usuario_dos u 
